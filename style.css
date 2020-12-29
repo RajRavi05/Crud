@@ -1,0 +1,206 @@
+:root{
+    --primary-color: rgba(116, 106, 250, 0.918);
+    --black-color:#000;
+    --white-color:#fff;
+    --light-green:rgb(96, 199, 96);
+    --lighter-green:rgb(34, 156, 34);
+    --red:rgb(216, 14, 14);
+    --grey:rgba(160, 154, 247, 0.918);
+    --orange:orangered;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    background: rgba(226, 217, 210, 0.829);
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* Navbar */
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    padding: 1.2rem;
+}
+
+#navbar ul{
+    list-style: none;
+    display: flex;
+}
+
+#navbar li a{
+    margin-right: 1.4rem;
+    color: var(--black-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#navbar .searchBar input{
+    padding: .3rem;
+    border-radius: 100px;
+    border: none;
+    width: 300px;
+    margin-right: -100px;
+}
+#navbar .searchBar input:focus{
+    outline: none;
+}
+#navbar .searchBar button{
+    padding: .3rem;
+    border-radius: 100px;
+    border: none;
+    background:var(--light-green);
+    cursor: pointer;
+}
+#navbar .searchBar button:hover{
+    background: var(--lighter-green);
+}
+#navbar .searchBar button:focus{
+    outline: none;  
+}
+
+/* modals */
+.modalSignup,
+.modalLogin{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    background:var(--primary-color) ;
+    width: 400px;
+    z-index: 100;
+    padding: 1.2rem;
+    border-radius: 10px;
+    opacity: 10;
+}
+.displayModal{
+    display: none;
+}
+.modalSignup label,
+.modalLogin label{
+    display: block;
+    margin-top: 5px;
+}
+.modalSignup input,
+.modalLogin input{
+    margin-bottom:10px;
+    padding: .3rem;
+}
+.title{
+    color: var(--white-color);
+    text-align: center;
+
+}
+
+/* Credentials */
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:60%;
+}
+.credHeading h2{
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.credDetails{
+    background: var(--primary-color);
+    padding: 1.2rem;
+    display: flex;
+    width: 500px;
+    border-radius: 10px;
+}
+.credDetails form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.credDetails form .formGroup{
+    padding: 1.2rem;
+    font-weight: 700;
+}
+.credDetails form .formGroup label{
+    display: block;
+    margin-bottom: 5px;
+}
+.credDetails form .formGroup input{
+    padding: .5rem;
+    border-radius: 4px;
+    border: none;
+}
+.credDetails form .formGroup input:focus{
+    outline: none;
+}
+.btn-submit{
+    display: block;
+    padding: .5rem 2.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background: var(--red);
+    transition: all .3s ease;    
+}
+.btn-submit:hover{
+    /* /* background: var(--lighter-green); */
+    transform: translateY(-5px);
+    transition: all .3s ease; 
+}
+.btn-submit:focus{
+    outline: none;
+}
+.btn-submit:active{
+    transform: translateY(-3px);
+    transition: all .3s ease; 
+}
+/* TABLES */
+.table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 750px; */
+}
+table{
+    /* position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);*/
+    width: 900px; 
+    text-align: center;
+    background: var(--primary-color);
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 5px rgba(0,0,0,.2);
+}
+table th{
+    background: var(--light-green);
+    
+}
+td, th{
+    padding: .75rem 1rem;
+}
+tr:nth-child(even){
+    background: var(--grey);
+    overflow: hidden;
+}
+td a{
+    color: var(--red);
+    font-weight: 700;
+}
