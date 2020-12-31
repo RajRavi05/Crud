@@ -1,135 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>CRUD APP</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav id="navbar" class="navbar">
-        <h2 class="logo">CRUD APPLICATION</h2>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#"  id="signup" class="signup">Signup</a></li>
-            <li><a href="#"  id="login" class="login">Login</a></li>
-            <li><a href="#" id="logout" class="logout">Logout</a></li>
-        </ul>
-        <div class="searchBar">
-            <input type="text" id="search" placeholder="Search Details">
-            <button id="btn-search">Search Details</button>
-        </div>
+      <h2 class="logo">CRUD APPLICATION</h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#" id="signup" class="signup">Signup</a></li>
+        <li><a href="#" id="login" class="login">Login</a></li>
+        <li><a href="#" id="logout" class="logout">Logout</a></li>
+      </ul>
+      <div class="searchBar">
+        <input type="text" id="search" placeholder="Search Details" />
+        <button id="btn-search">Search Details</button>
+      </div>
     </nav>
-    
+
     <!-- modals -->
     <div class="modalSignup displayModal" id="modalSignup">
-        <h2 class="title">SignUp</h2>
-        <form id="signupForm">
-            <div class="formGroup">
-                <label for="email">Enter Email</label>
-                <input type="email" id="email" placeholder="Email">
-            </div>
-            <div class="formGroup">
-                <label for="password">Enter Email</label>
-                <input type="password" id="password" placeholder="password">
-            </div>
-            <input type="submit" value="Signup" class="btn-submit">
-        </form>
+      <h2 class="title">SignUp</h2>
+      <form id="signupForm">
+        <div class="formGroup">
+          <label for="email">Enter Email</label>
+          <input type="email" id="email" placeholder="Email" />
+        </div>
+        <div class="formGroup">
+          <label for="password">Enter Email</label>
+          <input type="password" id="password" placeholder="password" />
+        </div>
+        <input type="submit" value="Signup" class="btn-submit" />
+      </form>
     </div>
 
-
     <div class="modalLogin displayModal" id="modalLogin">
-        <h2 class="title">LogIn</h2>
-        <form id="logInForm">
-            <div class="formGroup">
-                <label for="email">Enter Email</label>
-                <input type="email" id="logInemail" placeholder="Email">
-            </div>
-            <div class="formGroup">
-                <label for="password">Enter Email</label>
-                <input type="password" id="logInpassword" placeholder="password">
-            </div>
-            <input type="submit" value="LogIn" class="btn-submit">
-        </form>
+      <h2 class="title">LogIn</h2>
+      <form id="logInForm">
+        <div class="formGroup">
+          <label for="email">Enter Email</label>
+          <input type="email" id="logInemail" placeholder="Email" />
+        </div>
+        <div class="formGroup">
+          <label for="password">Enter Email</label>
+          <input type="password" id="logInpassword" placeholder="password" />
+        </div>
+        <input type="submit" value="LogIn" class="btn-submit" />
+      </form>
     </div>
 
     <main id="main" class="main display">
-       <section id="credentials">
-           <div class="credHeading">
-               <h2>credentials</h2>
-           </div>
-           <div class="credDetails">
-               <form id="det">
-                   <div class="formGroup">
-                       <label for="firstName">First Name</label>
-                       <input type="text" id="firstName" placeholder="First Name" >
-                   </div>
-                   <div class="formGroup">
-                       <label for="reg">Register Number</label>
-                       <input type="text" id="reg" placeholder="Register Number" >
-                   </div>
-                   <div class="formGroup">
-                       <label for="department">Department</label>
-                       <input type="text" id="department" placeholder="Department" >
-                   </div>
-                   <div class="formGroup">
-                       <label for="mobile">Mobile Number</label>
-                       <input type="text" id="mobile" placeholder="Mobile Number" >
-                   </div>
-                   <input type="submit" value="Add Details" id="submit" class="btn-submit">
-               </form>
-           </div>
-       </section>
+      <section id="credentials">
+        <div class="credHeading">
+          <h2>credentials</h2>
+        </div>
+        <div class="credDetails">
+          <form id="det">
+            <div class="formGroup">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" placeholder="First Name" />
+            </div>
+            <div class="formGroup">
+              <label for="reg">Register Number</label>
+              <input type="text" id="reg" placeholder="Register Number" />
+            </div>
+            <div class="formGroup">
+              <label for="department">Department</label>
+              <input type="text" id="department" placeholder="Department" />
+            </div>
+            <div class="formGroup">
+              <label for="mobile">Mobile Number</label>
+              <input type="text" id="mobile" placeholder="Mobile Number" />
+            </div>
+            <input
+              type="submit"
+              value="Add Details"
+              id="submit"
+              class="btn-submit"
+            />
+          </form>
+        </div>
+      </section>
     </main>
 
     <section id="tables" class="table">
-        <div class="tableDetails">
-            <table id="myTable">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Register Number</th>
-                        <th>Department</th>
-                        <th>Number</th>
-                        <th>Remove</th>
-                    </tr>
-                </thead>
-                <tbody id="list"></tbody>
-                <!-- <tr>
+      <div class="tableDetails">
+        <table id="myTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Register Number</th>
+              <th>Department</th>
+              <th>Number</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody id="list"></tbody>
+          <!-- <tr>
                     <td>Sanu</td>
                     <td>ICE</td>
                     <td>8754178781</td>
                     <td><a href="#" class="delete">X</a></td>
                 </tr>    -->
-            </table>
-        </div>
+        </table>
+      </div>
     </section>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyByiqs7aNjP0jaJ8iGK-MlA7DqcDjiuBm0",
-    authDomain: "crud-98562.firebaseapp.com",
-    projectId: "crud-98562",
-    // storageBucket: "crud-98562.appspot.com",
-    // messagingSenderId: "74223102614",
-    appId: "1:74223102614:web:087ece310ba78dd9f330b7"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const auth = firebase.auth();
-  const db =  firebase.firestore();
-</script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyByiqs7aNjP0jaJ8iGK-MlA7DqcDjiuBm0",
+        authDomain: "crud-98562.firebaseapp.com",
+        projectId: "crud-98562",
+        // storageBucket: "crud-98562.appspot.com",
+        // messagingSenderId: "74223102614",
+        appId: "1:74223102614:web:087ece310ba78dd9f330b7",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+
+      db.settings({ timestampsInSnapshots: true });
+    </script>
 
     <script src="./scripts/auth.js"></script>
     <script src="./scripts/app.js"></script>
-</body>
+  </body>
 </html>

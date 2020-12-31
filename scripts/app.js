@@ -1,3 +1,26 @@
+const list = document.querySelector("#list");
+const setupdetails = (data) => {
+  let html = "";
+  data.forEach((doc) => {
+    const details = doc.data();
+    let row = document.createElement("tr");
+
+    row = `
+              <td>${details.name}</td>
+              <td>${details.register}</td>
+              <td>${details.department}</td>
+              <td>${details.number}</td>
+              <td><a href="#" class="delete">X</a></td>
+          `;
+
+    html += row;
+
+    console.log(details);
+  });
+
+  list.innerHTML = html;
+};
+
 class Details {
   constructor(name, register, department, number) {
     this.name = name;
@@ -56,7 +79,7 @@ class UI {
   }
 }
 
-//Event listener for adding details
+// //Event listener for adding details
 document.querySelector("#det").addEventListener("submit", (e) => {
   const name = document.querySelector("#firstName").value;
   const register = document.querySelector("#reg").value;
@@ -127,4 +150,3 @@ login.addEventListener("click", () => {
 //       }
 //     }
 //   }
-s
